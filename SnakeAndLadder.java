@@ -6,7 +6,6 @@ public class SnakeAndLadder {
 		int Snake = 1;
 		int Ladder = 2;
 		int presentposition = 0;
-		System.out.println("starting the game you are in present position :"+ presentposition);
 		while(presentposition < 100) {
 			int dice = (int) ((Math.random() * 6) + 1);
 			System.out.println("to print random number:" + dice);
@@ -21,6 +20,8 @@ public class SnakeAndLadder {
 		}
 		else if(option == Ladder) {
 			presentposition = presentposition + dice;
+			if(presentposition > 100)
+				presentposition = presentposition - dice;
 			System.out.println("you are present position is:"+ presentposition);
 		}
 		else {
