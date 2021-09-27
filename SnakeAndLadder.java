@@ -6,7 +6,9 @@ public class SnakeAndLadder {
 		int Snake = 1;
 		int Ladder = 2;
 		int presentposition = 0;
+		int DiceRoll = 0;
 		while(presentposition < 100) {
+			DiceRoll ++;
 			int dice = (int) ((Math.random() * 6) + 1);
 			System.out.println("to print random number:" + dice);
 			int option = (int) (Math.random() * 3);
@@ -28,5 +30,6 @@ public class SnakeAndLadder {
 			System.out.println("you are present position is:"+ presentposition);
 		}	
 	}
+		System.out.println("number of times die rolled to win the game:"+ DiceRoll);
 }
 }
